@@ -7,16 +7,16 @@
   
   <title>hexo-blog | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo搭建个人博客首先要在本地安装node和Git环境 Git安装 node安装 本地使用hexo npm安装hexo 1npm install -g hexo-cli  验证hexo安装成功 1hexo -v  创建项目目录 12mkdir blog   &#x2F;&#x2F;后续所有的操作都在此目录下进行，如果出错无法解决，可以直接删除该目录，从该步骤重新开始cd blog  初始化hexo 1hexo in">
+  <meta name="description" content="1.Hexo搭建个人博客首先要在本地安装node和Git环境 Git安装 node安装 本地使用hexo npm安装hexo 1npm install -g hexo-cli  验证hexo安装成功 1hexo -v  创建项目目录 12mkdir blog   &#x2F;&#x2F;后续所有的操作都在此目录下进行，如果出错无法解决，可以直接删除该目录，从该步骤重新开始cd blog  初始化hexo 1hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo-blog">
 <meta property="og:url" content="http://yoursite.com/2020/08/17/hexo-blog/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo搭建个人博客首先要在本地安装node和Git环境 Git安装 node安装 本地使用hexo npm安装hexo 1npm install -g hexo-cli  验证hexo安装成功 1hexo -v  创建项目目录 12mkdir blog   &#x2F;&#x2F;后续所有的操作都在此目录下进行，如果出错无法解决，可以直接删除该目录，从该步骤重新开始cd blog  初始化hexo 1hexo in">
+<meta property="og:description" content="1.Hexo搭建个人博客首先要在本地安装node和Git环境 Git安装 node安装 本地使用hexo npm安装hexo 1npm install -g hexo-cli  验证hexo安装成功 1hexo -v  创建项目目录 12mkdir blog   &#x2F;&#x2F;后续所有的操作都在此目录下进行，如果出错无法解决，可以直接删除该目录，从该步骤重新开始cd blog  初始化hexo 1hexo">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/08/17/hexo-blog/image/hexo-helloworld.png">
 <meta property="article:published_time" content="2020-08-17T14:34:13.000Z">
-<meta property="article:modified_time" content="2020-08-17T15:37:21.503Z">
+<meta property="article:modified_time" content="2020-08-17T15:57:51.407Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="blog">
@@ -92,7 +92,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hexo搭建个人博客"><a href="#Hexo搭建个人博客" class="headerlink" title="Hexo搭建个人博客"></a>Hexo搭建个人博客</h1><p>首先要在本地安装node和Git环境</p>
+        <h1 id="1-Hexo搭建个人博客"><a href="#1-Hexo搭建个人博客" class="headerlink" title="1.Hexo搭建个人博客"></a>1.Hexo搭建个人博客</h1><p>首先要在本地安装node和Git环境</p>
 <p><a target="_blank" rel="noopener" href="https://www.baidu.com/">Git安装</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.baidu.com/">node安装</a></p>
 <h2 id="本地使用hexo"><a href="#本地使用hexo" class="headerlink" title="本地使用hexo"></a>本地使用hexo</h2><ul>
@@ -118,22 +118,30 @@
 
 </li>
 </ul>
-<h2 id="服务器端使用hexo"><a href="#服务器端使用hexo" class="headerlink" title="服务器端使用hexo"></a>服务器端使用hexo</h2><p>这里告诉大家一个白嫖的办法，不用购买服务器，可以直接使用github/gitee搭建服务(鉴于国内访问github速度问题，在此使用gitee)</p>
+<h2 id="2-服务器端使用hexo"><a href="#2-服务器端使用hexo" class="headerlink" title="2.服务器端使用hexo"></a>2.服务器端使用hexo</h2><p>这里告诉大家一个白嫖的办法，不用购买服务器，可以直接使用github/gitee搭建服务(鉴于国内访问github速度问题，在此使用gitee)</p>
 <ul>
 <li><p>gitee新建Reponsitory。仓库名称是固定的username.github.io（username为你的帐号名）</p>
 </li>
 <li><p>安装插件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git        </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改配置文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vi _config.yml</span><br><span class="line"><span class="comment">//修改内容如下</span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//gitee.com/username/username.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发布</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d   <span class="comment">//hexo deploy的简写</span></span><br><span class="line">输入github/gitee账号和密码即可成功发布</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>访问</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//     浏览器访问 https://username.github.io</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
+<h1 id="3-更换主题"><a href="#3-更换主题" class="headerlink" title="3.更换主题"></a>3.更换主题</h1><p>- </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/17/hexo-blog/" data-id="ckdyngskj0000seub55seen12" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/17/hexo-blog/" data-id="ckdypuo4s0000whubdhasb38o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
